@@ -17,23 +17,23 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-blue-400 font-bold text-sm tracking-widest uppercase mb-3">Contact Us</h2>
+            <h2 className="text-[#20B2AA] font-bold text-sm tracking-widest uppercase mb-3">Contact Us</h2>
             <h3 className="text-4xl font-bold mb-8">Visit Shree Sai Hospital</h3>
             
             <div className="space-y-8">
               <a href={`tel:${hospitalPhone}`} className="flex gap-6 group cursor-pointer">
-                <div className="w-12 h-12 rounded-2xl bg-zinc-800 flex items-center justify-center shrink-0 group-hover:bg-blue-600 transition-colors">
-                  <Phone className="w-5 h-5 text-blue-400 group-hover:text-white" />
+                <div className="w-12 h-12 rounded-2xl bg-zinc-800 flex items-center justify-center shrink-0 group-hover:bg-[#20B2AA] transition-colors">
+                  <Phone className="w-5 h-5 text-[#20B2AA] group-hover:text-white" />
                 </div>
                 <div>
                   <p className="text-zinc-400 text-sm mb-1">Appointments & Emergency</p>
-                  <p className="text-xl font-bold group-hover:text-blue-400 transition-colors">{hospitalPhone}</p>
+                  <p className="text-xl font-bold group-hover:text-[#20B2AA] transition-colors">{hospitalPhone}</p>
                 </div>
               </a>
               
               <div className="flex gap-6">
                 <div className="w-12 h-12 rounded-2xl bg-zinc-800 flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5 text-blue-400" />
+                  <MapPin className="w-5 h-5 text-[#20B2AA]" />
                 </div>
                 <div>
                   <p className="text-zinc-400 text-sm mb-1">Hospital Address</p>
@@ -43,13 +43,39 @@ export default function Contact() {
 
               <div className="flex gap-6">
                 <div className="w-12 h-12 rounded-2xl bg-zinc-800 flex items-center justify-center shrink-0">
-                  <Clock className="w-5 h-5 text-blue-400" />
+                  <Clock className="w-5 h-5 text-[#20B2AA]" />
                 </div>
-                <div>
-                  <p className="text-zinc-400 text-sm mb-1">Working Hours</p>
-                  <p className="text-xl font-bold">Open 24/7</p>
-                  <p className="text-xl font-bold">All days (Mon-Sun)</p>
-                  <p className="text-zinc-500 text-sm"></p>
+
+                <div className="w-full">
+                  <p className="text-zinc-400 text-sm mb-3">OPD Hours</p>
+
+                  <div className="w-full max-w-md lg:max-w-none lg:w-[70%] overflow-hidden rounded-2xl border border-zinc-800">
+                    <table className="w-full text-sm">
+                      <tbody>
+                        {[
+                          ["Monday", "Open 24 Hrs"],
+                          ["Tuesday", "Open 24 Hrs"],
+                          ["Wednesday", "Open 24 Hrs"],
+                          ["Thursday", "Open 24 Hrs"],
+                          ["Friday", "Open 24 Hrs"],
+                          ["Saturday", "Open 24 Hrs"],
+                          ["Sunday", "Timings may vary"],
+                        ].map(([day, time], index) => (
+                          <tr
+                            key={index}
+                            className="border-b border-zinc-800 last:border-none"
+                          >
+                            <td className="px-4 py-3 text-white font-medium">
+                              {day}
+                            </td>
+                            <td className="px-4 py-3 text-left font-bold text-white">
+                              {time}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -59,7 +85,7 @@ export default function Contact() {
                 href={`https://wa.me/${whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-zinc-800 text-white px-6 py-3 rounded-xl font-bold hover:bg-zinc-700 transition-all"
+                className="inline-flex items-center gap-2 bg-[#20B2AA] text-white px-6 py-3 rounded-xl font-bold hover:bg-zinc-700 transition-all"
               >
                 <MessageSquare className="w-4 h-4" /> WhatsApp Us
               </a>
@@ -72,7 +98,7 @@ export default function Contact() {
             viewport={{ once: true }}
             className="relative group"
           >
-            <div className="relative w-full aspect-[4/5] sm:aspect-[3/2] rounded-[3rem] overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-800">
+            <div className="relative w-full aspect-[4/5] sm:aspect-[3/2] rounded-[1.5rem] overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-800">
               <iframe
                 src={embedUrl}
                 width="100%"
@@ -89,13 +115,13 @@ export default function Contact() {
                 href={googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute bottom-6 right-6 bg-blue-600 text-white p-4 rounded-2xl shadow-2xl flex items-center gap-2 font-bold text-sm hover:scale-105 transition-transform md:hidden"
+                className="absolute bottom-6 right-6 bg-[#20B2AA] text-zinc-900 p-4 rounded-2xl shadow-2xl flex items-center gap-2 font-bold text-sm hover:scale-105 transition-transform md:hidden"
               >
-                <ExternalLink className="w-4 h-4 text-white" /> Open in Maps
+                <ExternalLink className="w-4 h-4 text-zinc-900" /> Open in Maps
               </a>
             </div>
 
-            <div className="absolute -bottom-4 -left-4 bg-blue-600 p-5 rounded-3xl shadow-xl hidden sm:block">
+            <div className="absolute -bottom-4 -left-4 bg-[#20B2AA] p-5 rounded-3xl shadow-xl hidden sm:block">
               <p className="text-white font-bold text-sm">Verified Location</p>
               <p className="text-blue-100 text-[10px] uppercase tracking-wider font-medium">Dighi, Pune</p>
             </div>

@@ -26,7 +26,8 @@ const services = [
   { title: 'Pediatrics', icon: Baby },
   { title: 'Orthopedics', icon: Bone },
   { title: 'Urology', icon: Droplets },
-  { title: 'Dermatology', icon: Sparkles },
+  { title: 'Dermatology (Skin & Hair)', icon: Sparkles },
+  { title: 'Ophthalmology (Eye Treatment)' },
   { title: 'Physiotherapy', icon: Accessibility },
   { title: 'Laparoscopic Surgery', icon: Microscope },
   { title: 'Maternity Center', icon: Heart },
@@ -46,7 +47,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-blue-600 font-bold text-sm tracking-widest uppercase mb-3">Multispeciality Care</h2>
+            <h2 className="text-[#20B2AA] font-bold text-sm tracking-widest uppercase mb-3">Multispeciality Care</h2>
             <h3 className="text-4xl font-bold text-zinc-900 mb-6">
               Our Specialized Medical Services
             </h3>
@@ -56,22 +57,20 @@ export default function Services() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.03 }}
-                className="group flex flex-col items-center justify-center p-8 rounded-[2rem] border border-zinc-100 bg-zinc-50 hover:bg-blue-600 hover:border-blue-600 transition-all duration-300 text-center"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-white text-blue-600 flex items-center justify-center mb-4 shadow-sm group-hover:scale-110 transition-transform">
-                  <Icon className="w-7 h-7" />
-                </div>
-                <h4 className="text-sm font-bold text-zinc-900 group-hover:text-white transition-colors">
+                transition={{ delay: index * 0.05 }}
+                className="group flex flex-col items-center justify-center text-center p-6 rounded-[1.5rem] bg-gradient-to-b from-[#20B2AA]/20 to-white shadow-md transition-all duration-300">
+
+                {/* Text */}
+                <h4 className="text-base font-bold text-zinc-900 whitespace-pre-line">
                   {service.title}
                 </h4>
               </motion.div>

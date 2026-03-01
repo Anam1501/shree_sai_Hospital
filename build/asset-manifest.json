@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eefb1c26.css",
+    "main.js": "/static/js/main.51297408.js",
+    "static/media/doctor.JPEG": "/static/media/doctor.3b14c4442a42a82d71f1.JPEG",
+    "static/media/hospital.jpg": "/static/media/hospital.5808b70b6f70a2dd4b9c.jpg",
+    "static/media/hospital_logo_final.JPG": "/static/media/hospital_logo_final.a3c1a7f185d606846706.JPG",
+    "index.html": "/index.html",
+    "main.eefb1c26.css.map": "/static/css/main.eefb1c26.css.map",
+    "main.51297408.js.map": "/static/js/main.51297408.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eefb1c26.css",
+    "static/js/main.51297408.js"
+  ]
+}

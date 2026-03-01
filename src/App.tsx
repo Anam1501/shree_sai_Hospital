@@ -8,9 +8,6 @@ import Facility from './components/Facility';
 import Reviews from './components/Reviews';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import DoctorDashboard from './pages/DoctorDashboard';
-import ForgotPassword from './pages/ForgotPassword';
-import ResetPassword from './pages/ResetPassword';
 
 function App() {
   return (
