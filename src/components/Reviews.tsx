@@ -52,7 +52,7 @@ const StarRating = ({ rating, size = "w-6 h-6" }: { rating: number; size?: strin
 
 export default function Reviews() {
   const googleReviewUrl = "https://www.google.com/search?sca_esv=f845591e1947aef4&cs=0&biw=1280&bih=712&sxsrf=ANbL-n6gaBFPSK9kDEFz2wbVAKfMqCDx5g:1772263805061&si=AL3DRZFIhG6pAqfNLal55wUTwygCG0fClF3UxiOmgw9Hq7nbWdw2NiqGPgOgS_nVgqfWzNFE4Jok6_ygADNTQsKFE9-GFx2DaIXk6auboV4u4gasPX6i8Uw6toEuXZdjy525Mse3gBuCJujDyJily-k4jNJavMHULjnpKe7LChTMvyWYDhuPhcM%3D&q=Shree+Sai+Hospital+Dighi+Dr+Ram+Pawar+Reviews&sa=X&ved=2ahUKEwj26rGU1fuSAxWPa_UHHZXvKhwQ0bkNegQIJxAF";
-  const averageRating = 4.5;
+  const averageRating = 4.8;
 
   return (
     <section id="reviews" className="py-24 bg-zinc-50">
