@@ -13,7 +13,7 @@ export default function About() {
     },
     { 
       label: 'Reviews', 
-      value: '4.5', 
+      value: '4.8', 
       icon: Star, 
       color: 'text-amber-400 fill-amber-400' 
     },
